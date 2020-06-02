@@ -1,0 +1,12 @@
+---
+- hosts: all
+  vars_files:
+    - config.yml
+  roles:
+    - {role: "{{default_network}}"}
+    - {role: "{{cni_multiplexer}}"}
+    - {role: kubevirt-ovs         }
+    - {role: intel-sriov          }
+    - {role: intel-userspace      }
+
+

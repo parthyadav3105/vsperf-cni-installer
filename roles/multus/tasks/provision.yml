@@ -1,0 +1,8 @@
+---
+
+- name: Deploy Multus
+  k8s:
+    state: present
+    definition: "{{ lookup('template', 'multus-daemonset.yml') }}"
+    wait: yes
+
