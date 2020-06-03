@@ -3,6 +3,7 @@
   vars_files:
     - config.yml
   roles:
+    - {role: pre-deploy           }
     - {role: "{{default_network}}"}
     - {role: "{{cni_multiplexer}}"}
     - {role: kubevirt-ovs         }

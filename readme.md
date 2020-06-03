@@ -5,45 +5,38 @@ Methods to use:
 1. Using playbooks
 2. Using docker
 
+<br>
 
+##### Prerequisite on target hosts:
+
+* Python 3.6
+* Should be K8s master (cluster api) running an active cluster
+
+<br>
 
 ### Using playbooks
 
-##### Prerequisite:
-
-* Python (>=3 preferred)
-* Ansible-playbook (>=2.9 preferred)
-* pip install openshift
-
-
-
 Default run:
 
-```$ ansible-playbook main.yml```
+​	```$ ansible-playbook main.yml```
 
 Overriding any config
 
-```$ ansible-playbook main.yml -e action=deprovision```
+​	```$ ansible-playbook main.yml -e action=deprovision```
 
 or simply edit config.yml
 
-
+<br>
 
 ### Using Docker
 
-##### Prerequisite:
-
-* Docker
-
-
-
 Default run:
 
-```$ docker container run parthyadav/cni-installer```
+​	```$ docker container run parthyadav/cni-installer```
 
 Overriding any config 
 
-```$ docker container run parthyadav/cni-installer -e action=deprovision```
+​	```$ docker container run parthyadav/cni-installer -e action=deprovision```
 
 or simply mount new 'config.yml'
 
@@ -53,11 +46,5 @@ or simply mount new 'config.yml'
 
 
 
-Overriding hosts file
 
-```$ docker container run parthyadav/cni-installer -i newHostsFile```
-
-or simply mount new 'hosts' file
-
-```$ docker container run -v $(pwd)/hosts:/playbooks/hosts parthyadav/cni-installer```
 

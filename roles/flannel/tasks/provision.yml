@@ -1,5 +1,8 @@
 ---
 
+- name: Clean
+  include: deprovision.yml
+
 - name: Deploy Kube-flannel
   k8s:
     state: present
